@@ -3,7 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbershop booking system</title>
+    <title>Barbershop Booking System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="app-header">
+      <div class="app-header__content">
+        <h1 class="app-header__title">Dom Barber Shop</h1>
+        <p class="app-header__subtitle">
+          Book your appointment online in a few clicks
+        </p>
+      </div>
+    </header>
+
+    <main class="app-container">
+      <section class="card">
+        <h2 class="card__title">New Appointment</h2>
+
+        <form id="bookingForm" class="booking-form">
+          <div class="form-field">
+            <label for="clientNameInput">Full Name</label>
+            <input
+              type="text"
+              id="clientNameInput"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="serviceSelect">Service</label>
+            <select id="serviceSelect" required>
+              <option value="">Select a service</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="dateInput">Date</label>
+            <input type="date" id="dateInput" required />
+          </div>
+
+          <div class="form-field">
+            <label>Available Time Slots</label>
+            <p class="hint-text">
+              Open daily from 9:00 to 21:00 — each appointment takes 1 hour.
+            </p>
+
+            <div class="time-period">
+              <h3 class="time-period__title">Morning</h3>
+              <div id="morningSlots" class="time-slot-group"></div>
+            </div>
+
+            <div class="time-period">
+              <h3 class="time-period__title">Afternoon</h3>
+              <div id="afternoonSlots" class="time-slot-group"></div>
+            </div>
+
+            <div class="time-period">
+              <h3 class="time-period__title">Evening</h3>
+              <div id="eveningSlots" class="time-slot-group"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="primary-button">
+            Confirm Appointment
+          </button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title">Booked Appointments</h2>
+        <p class="card__subtitle">
+          Showing appointments for <span id="selectedDateLabel"></span>
+        </p>
+
+        <div id="appointmentsList" class="appointments-list"></div>
+      </section>
+    </main>
+
+    <script src="../build/bundle.js"></script>
+  </body>
 </html>
