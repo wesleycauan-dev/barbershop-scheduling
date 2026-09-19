@@ -1,5 +1,12 @@
 {
+  "name": "barbershop-booking-system",
+  "version": "1.0.0",
+  "description": "A simple and complete barbershop appointment booking system built with HTML, CSS and TypeScript - portfolio project.",
+  "scripts": {
+    "build": "tsc && node scripts/bundle.js",
+    "watch": "tsc --watch"
+  },
   "devDependencies": {
-    "typescript": "^7.0.2"
+    "typescript": "^5.4.0"
   }
 }

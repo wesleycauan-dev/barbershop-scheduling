@@ -1,1 +1,4 @@
-node_modules
+node_modules/
+.compiled/
+*.log
+.DS_Store
